@@ -1,0 +1,11 @@
+.autocomplete-option {
+    cursor: pointer;
+    padding: 5px;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea
+  }
+  
+.autocomplete-option:hover {
+background-color: lightgray;
+}
