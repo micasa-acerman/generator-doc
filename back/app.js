@@ -33,7 +33,7 @@ app.get('/organizations', (req, res) => {
 app.post('/generate', (req, res)=>{
   console.log(req.body)
   try{
-    const filePath = path.join(__dirname,'docs',v4()+'.docx')
+    const filePath = path.join(__dirname,v4()+'.docx')
     saveDataToDoc(filePath,req.body)
     res.sendFile(
       filePath,
