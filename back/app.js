@@ -6,10 +6,11 @@ const path = require('path');
 const { parse } = require('csv-parse');
 const app = express()
 const mime = require('mime');
-const port = 3000
 const {v4 } = require('uuid');
 
+const port = 80
 let csvData = [];
+
 fs.createReadStream(path.join(__dirname, 'data.csv'))
   .pipe(parse({ delimiter: ';' }))
   .on('data', function (csvrow) {
