@@ -16,6 +16,7 @@ background-color: lightgray;
 #f-code-org-autocomplete, #f-code-parent-org-autocomplete {
   max-height: 200px;
   position: absolute;
+  z-index: 1000;
   top: 100%;
   left: 0;
   right: 0;
