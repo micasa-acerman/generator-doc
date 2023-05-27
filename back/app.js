@@ -22,7 +22,7 @@ fs.createReadStream(path.join(__dirname, 'data.csv'))
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-const logFile = fs.createWriteStream('./myLogFile.log', {flags: 'a'});
+const logFile = fs.createWriteStream('./text.log', {flags: 'a'});
 app.use(morgan('combined', { stream: logFile }));
 
 app.get('/organizations', (req, res) => {
