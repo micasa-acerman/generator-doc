@@ -1,0 +1,24 @@
+.autocomplete-option {
+    cursor: pointer;
+    padding: 5px;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea
+  }
+  
+.autocomplete-option:hover {
+background-color: lightgray;
+}
+.autocomplete-wrapper{
+  position: relative;
+}
+
+#f-code-org-autocomplete, #f-code-parent-org-autocomplete {
+  max-height: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: auto;
+}

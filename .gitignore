@@ -1,3 +1,3 @@
-node_modules/
-output.docx
-out/
+back/node_modules
+back/public/
+front/node_modules

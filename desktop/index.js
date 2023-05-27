@@ -2,8 +2,8 @@ const Docxtemplater = require('docxtemplater');
 const fs = require('fs');
 const PizZip = require("pizzip");
 const path = require('path');
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const { parse } = require('csv-parse');
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 let mainWindow;
 try {
   require('electron-reloader')(module)
