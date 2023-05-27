@@ -6,7 +6,7 @@ const path = require('path');
 const { parse } = require('csv-parse');
 const app = express()
 const {v4 } = require('uuid');
-import morgan from 'morgan';
+const morgan = require('morgan');
 
 const port = 80
 let csvData = [];
