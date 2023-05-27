@@ -5,8 +5,8 @@ const PizZip = require("pizzip");
 const path = require('path');
 const { parse } = require('csv-parse');
 const app = express()
-const mime = require('mime');
 const {v4 } = require('uuid');
+import morgan from 'morgan';
 
 const port = 80
 let csvData = [];
@@ -22,6 +22,8 @@ fs.createReadStream(path.join(__dirname, 'data.csv'))
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+const logFile = fs.createWriteStream('./myLogFile.log', {flags: 'a'});
+app.use(morgan('combined', { stream: logFile }));
 
 app.get('/organizations', (req, res) => {
   res.json(csvData)
@@ -40,7 +42,7 @@ app.post('/generate', (req, res)=>{
             console.error(err);
         } else {
             console.log('Sent:', filePath);
-            fs.unlinkSync(filePath)
+            // fs.unlinkSync(filePath)
         }
       }
     )

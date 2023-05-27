@@ -34,6 +34,9 @@ async function handleFormSubmit(event) {
                 },
                 body: JSON.stringify(data),
             })
+            if(response.status !== 200){
+                showError('Произошла ошибка при попытке сгенерировать файл')
+            }
             const blob = await response.blob()
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
