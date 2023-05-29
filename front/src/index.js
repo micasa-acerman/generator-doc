@@ -110,10 +110,10 @@ function formatData(orgRow, parentRow, type) {
     const secondSignUsersPost = document.querySelectorAll('#employee-grant-second-sign-container .e-post')
 
     for (let i = 0; i < 3; i++) {
-        result['18_' + (i + 1)] = firstSignUsersName?.[i]?.value ?? '';
-        result['19_' + (i + 1)] = firstSignUsersPost?.[i]?.value ?? '';
-        result['20_' + (i + 1)] = secondSignUsersName?.[i]?.value ?? '';
-        result['21_' + (i + 1)] = secondSignUsersPost?.[i]?.value ?? '';
+        result['18_' + (i + 1)] = firstSignUsersPost?.[i]?.value ?? '';
+        result['19_' + (i + 1)] = firstSignUsersName?.[i]?.value ?? '';
+        result['20_' + (i + 1)] = secondSignUsersPost?.[i]?.value ?? '';
+        result['21_' + (i + 1)] = secondSignUsersName?.[i]?.value ?? '';
     }
 
 
