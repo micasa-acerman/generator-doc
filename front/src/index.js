@@ -80,10 +80,6 @@ async function loadOrganizationList() {
     return await fetch("/organizations")
 }
 
-function handleRemoveEmployee(e) {
-    e.parentNode.parentNode.remove()
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('f-type').addEventListener('change', (e) => {
         if (['2', '4'].includes(e.target.value))
