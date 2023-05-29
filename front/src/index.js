@@ -159,8 +159,8 @@ function formatData(orgRow, parentRow, type) {
     result['17'] = orgRow[59];
     result['22'] = document.getElementById('l-post').value;
     result['23'] = document.getElementById('l-name').value;
-    result['24'] = document.getElementById('b-post').value;
-    result['25'] = document.getElementById('b-name').value;
+    result['24'] = document.getElementById('b-post').value || "бухгалтерский работник в штате не предусмотрен";
+    result['25'] = document.getElementById('b-post').value ? document.getElementById('b-name').value : '';
 
     return result
 }
