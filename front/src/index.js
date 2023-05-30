@@ -112,6 +112,8 @@ function formatData(orgRow, parentRow, type) {
         result['20_' + (i + 1)] = secondSignUsersPost?.[i]?.value ?? '';
         if(i === 0)
             result['21_' + (i + 1)] = secondSignUsersName?.[i]?.value || 'бухгалтерский работник в штате не предусмотрен';
+        else result['21_' + (i + 1)] = secondSignUsersName?.[i]?.value ?? '';
+
     }
 
 
