@@ -110,7 +110,8 @@ function formatData(orgRow, parentRow, type) {
         result['18_' + (i + 1)] = firstSignUsersPost?.[i]?.value ?? '';
         result['19_' + (i + 1)] = firstSignUsersName?.[i]?.value ?? '';
         result['20_' + (i + 1)] = secondSignUsersPost?.[i]?.value ?? '';
-        result['21_' + (i + 1)] = secondSignUsersName?.[i]?.value || 'бухгалтерский работник в штате не предусмотрен';
+        if(i === 0)
+            result['21_' + (i + 1)] = secondSignUsersName?.[i]?.value || 'бухгалтерский работник в штате не предусмотрен';
     }
 
 
