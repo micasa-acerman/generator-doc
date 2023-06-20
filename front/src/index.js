@@ -162,7 +162,7 @@ function formatData(orgRow, parentRow, type) {
     result['22'] = document.getElementById('l-post').value;
     result['23'] = document.getElementById('l-name').value;
     result['24'] = document.getElementById('b-post').value;
-    result['25'] = document.getElementById('b-post').value;
+    result['25'] = document.getElementById('b-name').value;
 
     return result
 }
